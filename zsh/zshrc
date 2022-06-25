@@ -15,7 +15,7 @@ function find_yadr() {
   yadr=`fdfind -H .yadr $HOME | head | sed 's/\/\.yadr//'`
   export yadr
 }
-export yadr="/home/pmorgan/.dotfiles"
+export yadr="/home/pmorgan/tools/dotfiles"
 
 # autoload -U promptinit
 # promptinit
@@ -53,23 +53,3 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 [ -f ~/.resh/shellrc ] && source ~/.resh/shellrc # this line was added by RESH (Rich Enchanced Shell History)
-
-source /home/pmorgan/.local/share/phylum/zshrc
-
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-#AWSume alias to source the AWSume script
-alias awsume="source \$(pyenv which awsume)"
-
-#Auto-Complete function for AWSume
-_awsume() {
-    local cur prev opts
-    COMPREPLY=()
-    cur="${COMP_WORDS[COMP_CWORD]}"
-    prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts=$(awsume-autocomplete)
-    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
-    return 0
-}
