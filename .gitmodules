@@ -1,4 +1,16 @@
 [submodule "dotbot"]
-	path = dotbot
+	path = submodules/dotbot
 	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "tmux"]
+	path = submodules/tmux
+	url = https://github.com/gpakosz/.tmux
+	ignore = dirty
+[submodule "tmux-1password"]
+	path = tmux-1password
+	url = https://github.com/yardnsm/tmux-1password
+	ignore = dirty
+[submodule "tmux-jump"]
+	path = tmux-jump
+	url = https://github.com/schasse/tmux-jump
 	ignore = dirty
