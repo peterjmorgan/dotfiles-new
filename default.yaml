@@ -5,9 +5,10 @@
 
 
 - link:
-    ~/.profile: etc/profile
     ~/.bashrc: etc/bashrc
     ~/.bash_logout: etc/bash_logout
+    ~/.gitconfig: etc/gitconfig
+    ~/.profile: etc/profile
     ~/.ssh/config:
         path: etc/ssh/config
         create: true
