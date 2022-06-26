@@ -1,4 +1,8 @@
-- clean: ['~']
+- clean:
+    - '~'
+    - ~/.cargo
+    - ~/.ssh
+
 
 - link:
     ~/.profile: profile
@@ -7,13 +11,29 @@
     ~/.ssh/config:
         path: ssh/config
         create: true
-    ~/.vim/vimrc:
-        path: vim/vimrc
+    ~/.vim: etc/vim
+    ~/.vimrc:
+        path: etc/vimrc
         create: true
-    ~/.zshenv: zshenv
-    ~/.zshrc: zshrc
+    ~/.zsh: etc/zsh
+    ~/.zshenv: etc/zshenv
+    ~/.zshrc: etc/zshrc
     ~/bin:
         path: bin/
         create: true
 
-
+- shell:
+  - |
+    OS_CONFIG=os/`uname | tr '[:upper:]' '[:lower:]'`/default.yaml
+    if [[ -f $OS_CONFIG ]]; then
+      ./submodules/dotbot/bin/dotbot -c $OS_CONFIG
+    fi
+  - |
+    HOST_CONFIG=box/$HOST/default.yaml
+    if [[ -f $HOST_CONFIG ]]; then
+      ./submodules/dotbot/bin/dotbot -c $HOST_CONFIG
+    fi
+  - chmod 700 ~/.vim
+  - chmod 700 ~/.ssh
+  - chmod 700 ~/.gnupg
+  - chmod 600 ~/.ssh/config
