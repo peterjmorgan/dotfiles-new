@@ -5,11 +5,11 @@
 
 
 - link:
-    ~/.profile: profile
-    ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
+    ~/.profile: etc/profile
+    ~/.bashrc: etc/bashrc
+    ~/.bash_logout: etc/bash_logout
     ~/.ssh/config:
-        path: ssh/config
+        path: etc/ssh/config
         create: true
     ~/.vim: etc/vim
     ~/.vimrc:
