@@ -17,8 +17,7 @@
         path: etc/vimrc
         create: true
     ~/.zsh: etc/zsh
-    ~/.zshenv: etc/zshenv
-    ~/.zshrc: etc/zshrc
+    ~/.zshrc: etc/zsh/zshrc
     ~/bin:
         path: bin/
         create: true
