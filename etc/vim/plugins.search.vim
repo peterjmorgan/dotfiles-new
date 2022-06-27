@@ -120,9 +120,9 @@
   Plug 'tpope/vim-abolish'
   "" }}}
 
-"" Plugin: vim-gutentags {{{
-  Plug 'ludovicchabant/vim-gutentags'
-  "" }}}
+""" Plugin: vim-gutentags {{{
+"  Plug 'ludovicchabant/vim-gutentags'
+""" }}}
 
 "" Plugin: unite {{{
   Plug 'Shougo/unite.vim'
