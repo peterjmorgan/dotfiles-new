@@ -24,9 +24,8 @@ alias l='ls -lh'
 alias lsg='ll | grep'
 
 # Alias Editing
-alias ae='vi $location/zsh/aliases.zsh' #alias edit
-alias ar='source $location/zsh/aliases.zsh'  #alias reload
-
+alias ae='vi $location/etc/zsh/aliases.zsh' #alias edit
+alias ar='source $location/etc/zsh/aliases.zsh'  #alias reload
 
 # vimrc editing
 alias ve='vi ~/.vimrc'
@@ -36,12 +35,12 @@ alias ze='vi ~/.zshrc'
 alias zr='source ~/.zshrc'
 
 # shell var editing
-alias se='vi $location/zsh/shellvars.zsh'
-alias sr='source $location/zsh/shellvars.zsh'
+alias se='vi $location/etc/zsh/shellvars.zsh'
+alias sr='source $location/etc/zsh/shellvars.zsh'
 
 # functions editing
-alias fe='vi $location/zsh/functions.zsh'
-alias fr='source $location/zsh/functions.zsh'
+alias fe='vi $location/etc/zsh/functions.zsh'
+alias fr='source $location/etc/zsh/functions.zsh'
 
 # ssh config edit
 alias sshe='vi ~/.ssh/config'
@@ -104,12 +103,6 @@ alias cl='clear'
 # Zippin
 alias gz='tar -zcvf'
 
-# Ruby
-# alias c='pry -r ./config/environment'
-# alias ts='thin start'
-# alias ms='mongrel_rails start'
-# alias tfdl='tail -f log/development.log'
-
 # Vim/ctags "mctags = make ctags", using the ruby specific version
 # to save some time
 alias mctags=~/.bin/run_tags.rb #'/opt/local/bin/ctags -Rf ./tags *'
@@ -120,9 +113,6 @@ alias k9='kill -9'
 alias pk='pkill'
 alias pk9='pkill -9'
 
-# Gem install
-alias sgi='sudo gem install --no-ri --no-rdoc'
-
 # TODOS
 # This uses NValt (NotationalVelocity alt fork) - http://brettterpstra.com/project/nvalt/
 # to find the note called 'todo'
@@ -130,14 +120,6 @@ alias todo='open nvalt://find/todo'
 
 # Forward port 80 to 3000
 alias portforward='sudo ipfw add 1000 forward 127.0.0.1,3000 ip from any to any 80 in'
-
-alias rdm='rake db:migrate'
-alias rdmr='rake db:migrate:redo'
-
-# shellvar links
-alias gocur='pushd .; cd $CUR'
-
-alias cgrep='grep --color'
 
 #alias cal='`cal`; today=`date "+%e"`; echo -en "${cal/${today}/\033[1;32m${today}\033[0m}"'
 
