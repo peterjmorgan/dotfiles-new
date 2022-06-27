@@ -38,9 +38,13 @@ export BREW_HOME="/home/linuxbrew/.linuxbrew/bin"
 export PATH="$PATH:$BREW_HOME"
 
 # starship
-eval "$(starship init zsh)"
+if [ command -v starship ]; then
+  eval "$(starship init zsh)"
+fi
 
 #zoxide
-eval "$(zoxide init zsh)"
+if [ command -v zoxide ]; then
+  eval "$(zoxide init zsh)"
+fi
 
 [ -f ~/.resh/shellrc ] && source ~/.resh/shellrc # this line was added by RESH (Rich Enchanced Shell History)
