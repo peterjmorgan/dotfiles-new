@@ -11,7 +11,7 @@
 unset ZSH_DEBUG
 # export ZSH_DEBUG=true
 
-export location="$(pwd)"
+# export location="$(pwd)"
 
 # autoload -U promptinit
 # promptinit
