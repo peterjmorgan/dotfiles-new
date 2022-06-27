@@ -24,12 +24,8 @@ alias l='ls -lh'
 alias lsg='ll | grep'
 
 # Alias Editing
-alias ae='vi $yadr/zsh/aliases.zsh' #alias edit
-alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
-
-# vim using
-#alias vim=$(brew ls macvim | grep Contents/MacOS/Vim)
-#alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias ae='vi $location/zsh/aliases.zsh' #alias edit
+alias ar='source $location/zsh/aliases.zsh'  #alias reload
 
 
 # vimrc editing
@@ -40,12 +36,12 @@ alias ze='vi ~/.zshrc'
 alias zr='source ~/.zshrc'
 
 # shell var editing
-alias se='vi $yadr/zsh/shellvars.zsh'
-alias sr='source $yadr/zsh/shellvars.zsh'
+alias se='vi $location/zsh/shellvars.zsh'
+alias sr='source $location/zsh/shellvars.zsh'
 
 # functions editing
-alias fe='vi $yadr/zsh/functions.zsh'
-alias fr='source $yadr/zsh/functions.zsh'
+alias fe='vi $location/zsh/functions.zsh'
+alias fr='source $location/zsh/functions.zsh'
 
 # ssh config edit
 alias sshe='vi ~/.ssh/config'
