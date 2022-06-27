@@ -11,12 +11,7 @@
 unset ZSH_DEBUG
 # export ZSH_DEBUG=true
 
-# export location="$(pwd)"
-
-# autoload -U promptinit
-# promptinit
-# prompt adam1
-# find_yadr
+export location="$(pwd)/.dotfiles"
 
 # Configuration
 for config_file ($location/etc/zsh/*.zsh) {
