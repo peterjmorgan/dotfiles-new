@@ -10,6 +10,9 @@ homebrew:
 rust-shell:
   brew install bat exa fd ripgrep dust hexyl choose-rust
 
+starship:
+  curl -sS https://starship.rs/install.sh | bash -s -- -b $location/bin
+
 go-shell:
   brew install gron viddy
 
