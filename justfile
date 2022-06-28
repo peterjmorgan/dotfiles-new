@@ -15,15 +15,13 @@ crates:
   cargo install cargo-watch
   cargo install exa
   cargo install fd-find
-  cargo install just
   cargo install ripgrep
   cargo install du-dust
   cargo install choose
+  cargo install sd
 
 formulae:
   # packages
-  brew install cmake
-  # brew install fish
   brew install gpg
   brew install macvim
   brew install pinentry-mac
@@ -35,8 +33,6 @@ formulae:
   # casks
   brew cask install vlc
   brew cask install alacritty
-  # brew cask install google-chrome
-  # brew cask install quicksilver
   # fonts
   brew tap homebrew/cask-fonts
   brew install font-dejavu-sans-mono-for-powerline
@@ -57,30 +53,10 @@ hunter:
   git clone https://github.com/rabite0/hunter.git ~/tmp/hunter
   PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig" cargo +nightly install --path ~/tmp/hunter
 
-ledger:
+# ledger:
   # pip3 install ledger_agent
-
-gh-md-toc:
-  curl https://raw.githubusercontent.com/\
-    ekalinin/github-markdown-toc/master/gh-md-toc \
-    > bin/gh-md-toc
-  chmod +x bin/gh-md-toc
-
-shell-theme:
-  echo eval "$("./submodules/base16-shell/profile_helper.sh")"
-  echo base16_seti
 
 disable-power-chime:
   defaults write com.apple.PowerChime ChimeOnNoHardware -bool true
   killall PowerChime
 
-dia-x2160:
-  #!/usr/bin/env bash
-  set -euo pipefail
-  DIR=rsc/dia/x2160
-  rm -rf $DIR
-  mkdir $DIR
-  mogrify \
-    -filter point -resize '1600%' \
-    -background transparent -gravity center -extent 2160x2160 \
-    -path $DIR rsc/dia/original/*.png
