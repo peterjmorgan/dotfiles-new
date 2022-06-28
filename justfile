@@ -7,18 +7,14 @@ rustup:
 homebrew:
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-crates:
-  cargo install bat
-  cargo install cargo-check
-  cargo install cargo-edit
-  cargo install cargo-outdated
-  cargo install cargo-watch
-  cargo install exa
-  cargo install fd-find
-  cargo install ripgrep
-  cargo install du-dust
-  cargo install choose
-  cargo install sd
+rust-shell:
+  brew install bat exa fd ripgrep dust hexyl choose-rust
+
+go-shell:
+  brew install gron viddy
+
+python-shell:
+  brew install magic-wormhole
 
 formulae:
   # packages
