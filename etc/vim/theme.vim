@@ -18,4 +18,8 @@ endif
 " colorscheme summerfruit256
 " colorscheme gruvbox
 " colorscheme seoul256-light
-colorscheme molokai
+try
+  colorscheme molokai
+  catch
+endtry
+
