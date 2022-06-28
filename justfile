@@ -49,9 +49,6 @@ hunter:
   git clone https://github.com/rabite0/hunter.git ~/tmp/hunter
   PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig" cargo +nightly install --path ~/tmp/hunter
 
-# ledger:
-  # pip3 install ledger_agent
-
 disable-power-chime:
   defaults write com.apple.PowerChime ChimeOnNoHardware -bool true
   killall PowerChime
