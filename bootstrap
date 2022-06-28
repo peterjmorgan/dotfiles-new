@@ -13,4 +13,4 @@ SHELL=sh ./submodules/dotbot/bin/dotbot -c default.yaml
 vim +PlugInstall +qall now
 
 # Install rust so we can get just
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y

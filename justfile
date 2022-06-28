@@ -17,8 +17,8 @@ crates:
   cargo install fd-find
   cargo install just
   cargo install ripgrep
-	cargo install du-dust
-	cargo install choose
+  cargo install du-dust
+  cargo install choose
 
 formulae:
   # packages
