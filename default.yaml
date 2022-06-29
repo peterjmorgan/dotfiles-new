@@ -12,6 +12,8 @@
     ~/.ssh/config:
         path: etc/ssh/config
         create: true
+    ~/.tmux.conf: etc/submodules/tmux/.tmux.conf
+    ~/.tmux.conf.local: etc/tmux/tmux.conf.local
     ~/.vim: etc/vim
     ~/.vimrc:
         path: etc/vimrc
