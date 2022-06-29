@@ -16,6 +16,9 @@ starship:
 go-shell:
   brew install gron viddy
 
+phylum:
+  curl -sS https://raw.githubusercontent.com/phylum-dev/cli/main/scripts/phylum-init.sh | sh -s -- -y
+
 python-shell:
   brew install magic-wormhole
 
