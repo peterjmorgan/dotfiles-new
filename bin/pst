@@ -5,7 +5,9 @@ can() {
   return $?
 }
 
-if can xclip; then
+if can piknik; then
+  piknik -paste
+elif can xclip; then
   xclip -out -selection clipboard
 elif can pbcopy; then
   pbpaste

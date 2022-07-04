@@ -4,8 +4,9 @@ can() {
   command -v $1 > /dev/null
   return $?
 }
-
-if can xclip; then
+if can piknik; then
+  piknik -copy
+elif can xclip; then
   xclip -selection clipboard
 elif can pbcopy; then
   pbcopy
