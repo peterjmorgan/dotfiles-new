@@ -113,3 +113,8 @@
   " Check if file was modified under us
   Plug 'djoshea/vim-autoread'
 "" }}}
+
+"" Plugin: easy align {{{
+  " Align text
+  Plug 'junegunn/vim-easy-align'
+"" }}}

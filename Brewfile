@@ -12,3 +12,4 @@ brew "hexyl" # hex viewer
 brew "choose-rust" # cut replacement
 brew "watchexec" # run cmd on fs change
 brew "gh" # github cli
+brew "minisign" # ec25519 signature verification
