@@ -1,3 +1,6 @@
+# Required packages/libraries
+#   make gcc g++ python ruby openssl
+
 bootstrap:
   ./bootstrap
 
@@ -8,7 +11,12 @@ homebrew:
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 rust-shell:
-  brew install bat exa fd ripgrep dust hexyl choose-rust
+  #!/usr/bin/env bash
+  if hash brew 2>/dev/null; then
+    brew install bat exa fd ripgrep dust hexyl choose-rust watchexec
+  else
+    echo "brew needed"
+  fi
 
 starship:
   curl -sS https://starship.rs/install.sh | sh -s -- -b $location/bin
@@ -16,8 +24,17 @@ starship:
 go-shell:
   brew install gron viddy
 
+python-setup:
+  brew install pyenv make openssl
+  pyenv install $(pyenv install -l | grep -v - | tr -d ' ' | grep '^3' | tail -1) && pyenv rehash
+
 phylum:
-  curl -sS https://raw.githubusercontent.com/phylum-dev/cli/main/scripts/phylum-init.sh | sh -s -- -y
+  #!/usr/bin/env bash
+  if hash minisign 2>/dev/null; then
+    curl -sS https://raw.githubusercontent.com/phylum-dev/cli/main/scripts/phylum-init.sh | sh -s -- -y
+  else
+    echo "Minisign needed. Install first!"
+  fi
 
 python-shell:
   brew install magic-wormhole
