@@ -285,3 +285,26 @@ function wsl-display () {
     export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
     export LIBGL_ALWAYS_INDIRECT=1
 }
+
+function winkill() {
+    process_name=$(tasklist.exe | choose 0 |fzf --ansi)
+    echo "Process Name: $process_name"
+
+    # pids=$(tasklist.exe | grep -i $process_name | choose 1)
+    # echo "pids"
+    # declare -p pids
+
+    # bash, doesn't work in zsh
+    # readarray -t pids_array < <(tasklist.exe | grep -i $process_name | choose 1)
+    # echo "pids_array"
+    # declare -p pids_array
+
+    pids_array=("${(@f)$(tasklist.exe | grep -i $process_name | choose 1)}")
+    # echo "pids_array"
+    # declare -p pids_array
+    printf 'There are %d pids for %s\n' "${#pids_array[@]}" "${process_name}"
+
+    for i in ${pids_array[@]}; do
+        taskkill.exe /f /pid $i
+    done
+}
