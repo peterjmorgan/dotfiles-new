@@ -24,6 +24,7 @@
     ~/bin:
         path: bin/
         create: true
+    ~/.starship.toml: etc/starship.toml
 
 - shell:
   - |
