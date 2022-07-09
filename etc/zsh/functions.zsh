@@ -308,3 +308,12 @@ function winkill() {
         taskkill.exe /f /pid $i
     done
 }
+
+#TODO: consider moving this to a host specific config
+function git() {
+  if [[ $(pwd -P) = /mnt/* ]]; then
+    git.exe "$@"
+  else
+    command git "$@"
+  fi
+}
