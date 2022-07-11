@@ -286,6 +286,11 @@ function wsl-display () {
     export LIBGL_ALWAYS_INDIRECT=1
 }
 
+function bounceslack() {
+    tasklist.exe | grep -i slack.exe | choose 1 | while read foo; do taskkill.exe /f /pid $foo; done;
+    /mnt/c/Program\ Files/Slack/slack.exe
+}
+
 function winkill() {
     process_name=$(tasklist.exe | choose 0 |fzf --ansi)
     echo "Process Name: $process_name"
