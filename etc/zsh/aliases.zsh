@@ -83,6 +83,7 @@ alias gpl='git pull'
 alias gplr='git pull --rebase'
 alias gps='git push'
 alias gpsh='git push'
+alias gpu='git upstream'
 alias gnb='git nb' # new branch aka checkout -b
 alias grs='git reset'
 alias grsh='git reset --hard'
@@ -158,3 +159,5 @@ alias code='/mnt/c/Users/peter/AppData/Local/Programs/Microsoft\ VS\ Code/bin/co
 alias open='wsl-open'
 
 alias cdtmp='cd `mktemp -d /tmp/play-XXXX`'
+
+alias ph='phylum'
