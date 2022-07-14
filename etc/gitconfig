@@ -100,7 +100,6 @@
 [core]
   autocrlf = false
   editor = vim
-	excludesfile = /Users/pmorgan/.gitignore_global
 [advice]
   statusHints = false
 [diff]
