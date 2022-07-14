@@ -1,4 +1,4 @@
-/etc/vim/autoload
-/etc/vim/cache
-/etc/vim/plugged
+etc/vim/autoload/
+etc/vim/cache/
+etc/vim/plugged/
 tags
