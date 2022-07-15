@@ -13,6 +13,10 @@ rustup:
 homebrew:
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+brew-bundle:
+  brew tap homebrew/bundle
+  brew bundle --file=Brewfile --no-lock
+
 rust-shell:
   #!/usr/bin/env bash
   if hash brew 2>/dev/null; then

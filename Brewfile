@@ -13,3 +13,5 @@ brew "choose-rust"    # cut replacement
 brew "watchexec"      # run cmd on fs change
 brew "gh"             # github cli
 brew "minisign"       # ec25519 signature verification
+brew "git-delta"      # git diff parser
+brew "broot"          # new shake on 'tree'
