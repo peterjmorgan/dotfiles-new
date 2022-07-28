@@ -124,14 +124,6 @@ function routetest() {
     route get twitter.com | grep -i gateway
 }
 
-function rgem() {
-  rvm jruby-1.5.2,1.8.7,1.9.2 gem install $1
-}
-
-#function rgem-shire() {
-#  rvm jruby-1.5.2,1.8.7,1.9.2 gem install -p http://proxycacheF.hewitt.com:3128 $1
-#}
-
 function whog() {
   whois -h whois.geektools.com "$1"
 }
@@ -151,18 +143,6 @@ function numbers() {
 # quick port scan - ip port
 function qp() {
   nmap --min-rate=2000 -p$2 $1 -oG temp && cat temp | ruby ~/bin/gnmap-ng.rb
-}
-
-function rbjsonpp() {
-  pbpaste | ruby -e "require 'rubygems';require 'JSON'; jj JSON.parse(STDIN.gets)"
-}
-
-function rbxmlpp() {
-  pbpaste | ruby -e "require 'rubygems'; require 'rexml/document'; doc = REXML::Document.new(STDIN.gets); doc.write(STDOUT,1)"
-}
-
-function jsb() {
-  pbpaste | js-beautify -i
 }
 
 function addpaths {
@@ -226,22 +206,6 @@ function daverdp {
     open rdp://Administrator:"BeautyEssex7680"@$1
 }
 
-function zoom {
-    open "/Users/pmorgan/Library/Application Support/zoom.us/zoom.us.app"
-}
-
-function tmuxV {
-    tmux -L vimpry new-session -s vimpry
-}
-
-function tmuxN {
-    tmux new-session -s $1
-}
-
-function gnc {
-    geeknote create --notebook "Action Pending" --title $1 --content WRITE
-}
-
 # fbr - checkout git branch
 function fbrl() {
   local branches branch
@@ -259,16 +223,16 @@ function fbrr() {
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
 
-function rgv() {
-  rg --vimgrep $1 | vim -
-}
 
+#tmux functions
 function tn() {
   newname=$1
-  tmux new-session -s $1
+  if [ -z $newname ]; then
+      newname=$(basename $(echo $PWD))
+  fi
+  tmux new-session -s $newname
 }
 
-# Tmux Attach using fzf
 function ta() {
   selected=$(tmux ls | fzf --ansi)
   echo "selected = $selected"
@@ -321,4 +285,13 @@ function git() {
   else
     command git "$@"
   fi
+}
+
+# ripgrep functions
+function rgip() {
+    rg --vimgrep "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
+}
+
+function rgv() {
+  rg --vimgrep $1 | vim -
 }
