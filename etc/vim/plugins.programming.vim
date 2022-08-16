@@ -331,3 +331,7 @@ nnoremap <buffer> <leader>ap :ArduinoChooseProgrammer<CR>
   " " Allow external content like images
   " let g:instant_markdown_allow_external_content=1
 " "" }}}
+
+""" Plugin: vim-go {{{
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+""" }}}
