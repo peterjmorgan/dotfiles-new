@@ -97,6 +97,8 @@
   # 'git push' will push the current branch to its tracking branch
   # the usual default is to push all branches
   default = tracking
+	default = current
+	autoSetupRemote = true
 [core]
   autocrlf = false
   editor = vim
