@@ -145,7 +145,7 @@ alias pxmlp='pbpaste | xmllint --format - | pbcopy'
 alias vinew='vi *(.om[1])'
 alias vissh='vi ~/.ssh/config'
 
-alias fd='fdfind'
+# alias fd='fdfind'
 
 alias vagrant='/mnt/c/HashiCorp/Vagrant/bin/vagrant.exe'
 alias cmd='/mnt/c/Windows/system32/cmd.exe'
@@ -159,3 +159,4 @@ alias open='wsl-open'
 alias cdtmp='cd `mktemp -d /tmp/play-XXXX`'
 
 alias ph='phylum'
+alias ws='wormhole-william send'

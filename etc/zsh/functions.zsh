@@ -295,3 +295,9 @@ function rgip() {
 function rgv() {
   rg --vimgrep $1 | vim -
 }
+
+# function goland() {
+  # local exes=$(fd -e exe goland64 /mnt/c/Users/peter/AppData/Local/JetBrains/Toolbox/apps/Goland)
+  # #echo $exes
+  # eval "$exes";
+# }

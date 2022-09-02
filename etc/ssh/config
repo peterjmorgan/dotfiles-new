@@ -1,23 +1,31 @@
+Host icarus
+  HostName 192.168.0.2
+  Port 22222
+  IdentityFile ~/.ssh/id_ecdsa
+  RequestTTY yes
+  RemoteCommand sudo -i
+  LocalForward 11000 localhost:11000
+  LocalForward 20000 localhost:20000
+
+Host vader
+  HostName vader.lan
+  IdentityFile ~/.ssh/id_ecdsa
+  LocalForward 3000 localhost:3000
+  LocalForward 8081 localhost:8081
+
+Host executor
+  HostName executor.lan
+
+Host jabba
+  HostName jabba.lan
+  User pmorgan
+  IdentityFile ~/.ssh/id_ecdsa
 
 Host github.com
-	HostName github.com
-	User git
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/peterjmorgan@gmail.com_github_rsa
-
-Host jumphost
-	User root
-	HostName 167.71.121.123
-	IdentityFile ~/.ssh/id_rsa_jumphost-beta
-
-Host icarus
-	HostName icarus.lan
-	User pmorgan
-	Port 22222
-
-Host gitlab.com
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/peterjmorgan_gitlab_ecdsa
+  HostName github.com
+  User git
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/peterjmorgan@gmail.com_github_rsa
 
 Host droplet-bs
   User root
@@ -25,11 +33,3 @@ Host droplet-bs
   HostName 165.232.150.236
   IdentityFile ~/.ssh/digitalocean
   PreferredAuthentications publickey,password
-
-Host vader
-	User pmorgan
-	HostName vader.lan
-	IdentityFile ~/.ssh/id_ed25519
-	ForwardX11 yes
-
-
