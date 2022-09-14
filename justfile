@@ -5,6 +5,9 @@ default:
   @just -l
   @just --choose
 
+all: homebrew brew-bundle shell
+
+
 # bootstrap with dotbot
 bootstrap:
   ./bootstrap
@@ -20,6 +23,8 @@ rustup:
 # install homebrew
 homebrew:
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 
 # install homebrew utils via Brewfile
 brew-bundle:
@@ -29,7 +34,7 @@ brew-bundle:
 # setup shell
 shell:
   # starship
-  curl -sS https://starship.rs/install.sh | sh -s -- -b $location/bin
+  curl -sS https://starship.rs/install.sh | sh -s -- -b $HOME/bin
   # resh
   curl -fsSL https://raw.githubusercontent.com/curusarn/resh/master/scripts/rawinstall.sh | bash
 
