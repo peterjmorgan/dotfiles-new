@@ -1,4 +1,4 @@
-brew "wget"           # you know what wget is
+brew "curl"           # replaced wget with curl because wget is old and slow
 brew "gron"           # grep json easily
 brew "viddy"          # modern watch command
 brew "magic-wormhole" # easy PAKE-based file transfer
