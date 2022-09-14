@@ -4,6 +4,7 @@ set -euo pipefail
 
 export location="$(pwd)"
 
+git submodule init
 git submodule update --init --recursive .
 
 # Run dotbot
@@ -15,3 +16,4 @@ vim +PlugInstall +qall now
 # Install just
 curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to $location/bin
 
+bin/just all
