@@ -5,7 +5,8 @@ default:
   @just -l
   @just --choose
 
-all: homebrew brew-bundle shell
+all: homebrew
+  /bin/bash -c "$HOME/bin/just brew-bundle"
 
 
 # bootstrap with dotbot
