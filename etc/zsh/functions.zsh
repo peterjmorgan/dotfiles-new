@@ -301,3 +301,41 @@ function rgv() {
   # #echo $exes
   # eval "$exes";
 # }
+
+function wsl-fix-pyenv-paths() {
+    path=( ${path:#/mnt/c/Users/peter/.pyenv/pyenv-win/bin} )
+    path=( ${path:#/mnt/c/Users/peter/.pyenv/pyenv-win/shims} )
+    path=( ${path:#/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common} )
+}
+
+# function goland() {
+    # powershell.exe /mnt/c/Users/peter/AppData/Local/JetBrains/Toolbox/scripts/goland.cmd $1 &
+# }
+
+# function pokepkg() {
+    # eco=$1
+    # name=$2
+
+# }
+
+function dtemp() {
+    docker run --rm -it ubuntu /bin/bash
+}
+
+function jpoke-npm() {
+    local package=$1
+    local version=$2
+    curl -L "https://registry.npmjs.com/$package/$version" | gron
+}
+
+function poke-npm() {
+    local package=$1
+    local version=$2
+    local tarball_location=$(curl -sL "https://registry.npmjs.com/$package/$version" | gron | grep dist.tarball)
+    echo "Tarball Location: $tarball_location"
+    local url=$(echo $tarball_location | pcregrep -o "\"(https://registry.*?)\"" | sed 's/"//g')
+    echo "url: $url"
+    curl -O $url
+}
+
+

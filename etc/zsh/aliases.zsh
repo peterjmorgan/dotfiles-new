@@ -113,18 +113,14 @@ alias k9='kill -9'
 alias pk='pkill'
 alias pk9='pkill -9'
 
-# TODOS
-# This uses NValt (NotationalVelocity alt fork) - http://brettterpstra.com/project/nvalt/
-# to find the note called 'todo'
-alias todo='open nvalt://find/todo'
 
 # Forward port 80 to 3000
-alias portforward='sudo ipfw add 1000 forward 127.0.0.1,3000 ip from any to any 80 in'
+# alias portforward='sudo ipfw add 1000 forward 127.0.0.1,3000 ip from any to any 80 in'
 
 #alias cal='`cal`; today=`date "+%e"`; echo -en "${cal/${today}/\033[1;32m${today}\033[0m}"'
 
-alias hdm='hdiutil mount'
-alias hdu='hdiutil unmount'
+# alias hdm='hdiutil mount'
+# alias hdu='hdiutil unmount'
 
 alias pathcommands="IFS=':' i=($PATH); printf '%s\n' ${i[*]/%//*}"
 alias showpath="echo $PATH | tr ':' '\n'"
