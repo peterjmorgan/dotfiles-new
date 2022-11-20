@@ -7,7 +7,8 @@
 
 - link:
   # ~/.bashrc: etc/bashrc
-    ~/.bash_logout: etc/bash_logout
+    ~/.bash_logout:
+        path: etc/bash_logout
         force: true
     ~/.gitconfig: etc/gitconfig
       # ~/.profile: etc/profile
@@ -21,7 +22,8 @@
         path: etc/vimrc
         create: true
     ~/.zsh: etc/zsh
-    ~/.zshrc: etc/zsh/zshrc
+    ~/.zshrc:
+        path: etc/zsh/zshrc
         force: true
     ~/bin:
         path: bin/
