@@ -8,6 +8,7 @@
 - link:
   # ~/.bashrc: etc/bashrc
     ~/.bash_logout: etc/bash_logout
+        force: true
     ~/.gitconfig: etc/gitconfig
       # ~/.profile: etc/profile
     ~/.ssh/config:
@@ -21,6 +22,7 @@
         create: true
     ~/.zsh: etc/zsh
     ~/.zshrc: etc/zsh/zshrc
+        force: true
     ~/bin:
         path: bin/
         create: true
