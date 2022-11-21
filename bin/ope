@@ -6,6 +6,8 @@ elif hash xdg-open 2> /dev/null; then
   exec xdg-open "$@"
 elif hash gnome-open 2> /dev/null; then
   exec gnome-open "$@"
+elif hash wsl-open 2> /dev/null; then
+  exec wsl-open "$@"
 else
   echo "No opener found!"
 fi
