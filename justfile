@@ -1,6 +1,10 @@
 # Required packages/libraries
 #   make gcc g++ python ruby openssl
 
+set export
+GOLANG_VERSION := "1.19.3"
+GOLANG_SHASUM := "74b9640724fd4e6bb0ed2a1bc44ae813a03f1e72a4c76253e2d5c015494430ba"
+
 default:
   @just -l
   @just --choose
@@ -18,8 +22,15 @@ dotbot:
   sh ./submodules/dotbot/bin/dotbot -c default.yaml
 
 # install rust via rustup
-rustup:
+install-rust:
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+install-go:
+  url="https://golang.org/dl/go${GOLANG_VERSION}.linux-amd64.tar.gz" && \
+  wget -O go.tgz -nv "$url" && \
+  echo "${GOLANG_SHASUM} *go.tgz" | sha256sum -c - && \
+  sudo tar -C /usr/local -xzf go.tgz && \
+  rm go.tgz
 
 # install homebrew
 homebrew:
