@@ -49,7 +49,7 @@ shell:
   # starship
   curl -sS https://starship.rs/install.sh | sh -s -- -b $HOME/bin
   # resh
-  curl -fsSL https://raw.githubusercontent.com/curusarn/resh/master/scripts/rawinstall.sh | bash
+  # curl -fsSL https://raw.githubusercontent.com/curusarn/resh/master/scripts/rawinstall.sh | bash
 
 # install golang shell utils
 go-shell:
