@@ -79,12 +79,8 @@ python-setup:
 
 # install phylum CLI latest
 phylum:
-  #!/usr/bin/env bash
-  if hash minisign 2>/dev/null; then
-    curl -sS https://raw.githubusercontent.com/phylum-dev/cli/main/scripts/phylum-init.sh | sh -s -- -y
-  else
-    echo "Minisign needed. Install first!"
-  fi
+	curl https://sh.phylum.io/ | sh -
+
 
 
 # formulae:
