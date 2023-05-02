@@ -252,7 +252,7 @@ function wsl-display () {
 
 function bounceslack() {
     tasklist.exe | grep -i slack.exe | choose 1 | while read foo; do taskkill.exe /f /pid $foo; done;
-    /mnt/c/Program\ Files/Slack/slack.exe
+    nohup /mnt/c/Program\ Files/Slack/slack.exe &
 }
 
 function winkill() {
@@ -338,4 +338,15 @@ function poke-npm() {
     curl -O $url
 }
 
+function qnmap() {
+    local address=$1
+    nmap --min-rate=2500 -T5 -Pn $address
+}
 
+function pbp() {
+    xclip -out -selection clipboard
+}
+
+function goland() {
+    /mnt/c/Users/peter/AppData/Local/JetBrains/Toolbox/apps/Goland/ch-0/222.4345.24/bin/goland64.exe . &
+}

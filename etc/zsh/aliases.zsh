@@ -24,14 +24,14 @@ alias l='ls -lh'
 alias lsg='ll | grep'
 
 # Alias Editing
-alias ae='vi $location/etc/zsh/aliases.zsh' #alias edit
+alias ae='nvim $location/etc/zsh/aliases.zsh' #alias edit
 alias ar='source $location/etc/zsh/aliases.zsh'  #alias reload
 
 # vimrc editing
-alias ve='vi ~/.vimrc'
+alias ve='nvim ~/.vimrc'
 
 # zsh profile editing
-alias ze='vi ~/.zshrc'
+alias ze='nvim ~/.zshrc'
 alias zr='source ~/.zshrc'
 
 # shell var editing
@@ -103,11 +103,6 @@ alias cl='clear'
 # Zippin
 alias gz='tar -zcvf'
 
-# Vim/ctags "mctags = make ctags", using the ruby specific version
-# to save some time
-alias mctags=~/.bin/run_tags.rb #'/opt/local/bin/ctags -Rf ./tags *'
-alias maketags='/usr/local/bin/ctags -Rf ./tags *'
-
 alias ka9='killall -9'
 alias k9='kill -9'
 alias pk='pkill'
@@ -139,8 +134,8 @@ alias quickconns="netstat -ant|awk '{print $NF}'|grep -v '[a-z]'|sort|uniq -c "
 alias pxmlp='pbpaste | xmllint --format - | pbcopy'
 
 
-alias vinew='vi *(.om[1])'
-alias vissh='vi ~/.ssh/config'
+alias vinew='nvim *(.om[1])'
+alias vissh='nvim ~/.ssh/config'
 
 # alias fd='fdfind'
 
@@ -155,8 +150,17 @@ alias open='wsl-open'
 
 alias cdtmp='cd `mktemp -d /tmp/play-XXXX`'
 
+# Phylum aliases
 alias ph='phylum'
+# staging - peter@phylum.io
+alias phs="phylum -c $HOME/.config/phylum/pete-staging-settings.yaml"
+# demo account - petedemo@phylum.io
+alias phd="phylum -c $HOME/.config/phylum/petedemo-settings.yaml"
+
 alias ws='wormhole-william send'
 alias op='/mnt/c/Program\ Files/1Password\ CLI/op.exe'
 
 alias fdfind='fd'
+alias lg='lazygit'
+alias nv='nvim'
+alias timezsh='for i in $(seq 1 10); do time zsh -i -c exit; done'

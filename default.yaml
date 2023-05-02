@@ -31,6 +31,7 @@
     ~/.config/starship.toml:
         path: etc/starship.toml
         create: true
+    ~/.config/nvim: config/nvim
 
 - shell:
   - |
