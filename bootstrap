@@ -13,5 +13,8 @@ SHELL=sh ./submodules/dotbot/bin/dotbot -c default.yaml
 # Setup vim
 vim +PlugInstall +qall now
 
+# Setup nvim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
 # Install just
 curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to $location/bin
