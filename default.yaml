@@ -27,7 +27,6 @@
         force: true
     ~/bin:
         path: bin/
-        create: true
     ~/.config/starship.toml:
         path: etc/starship.toml
         create: true
