@@ -50,6 +50,8 @@ shell:
   curl -sS https://starship.rs/install.sh | sh -s -- -b $HOME/bin
   # resh
   # curl -fsSL https://raw.githubusercontent.com/curusarn/resh/master/scripts/rawinstall.sh | bash
+  # atuin
+  bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh)
 
 # install golang shell utils
 go-shell:
