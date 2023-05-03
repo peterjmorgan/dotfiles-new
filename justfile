@@ -51,7 +51,7 @@ shell:
   # resh
   # curl -fsSL https://raw.githubusercontent.com/curusarn/resh/master/scripts/rawinstall.sh | bash
   # atuin
-  bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh)
+  # bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh)
 
 # install golang shell utils
 go-shell:
