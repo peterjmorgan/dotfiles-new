@@ -47,7 +47,7 @@ brew-bundle:
 # setup shell
 shell:
   # starship
-  curl -sS https://starship.rs/install.sh | sh -s -- -b $HOME/bin
+  curl -sS https://starship.rs/install.sh | sh -s -y -- -b $HOME/bin
   # resh
   # curl -fsSL https://raw.githubusercontent.com/curusarn/resh/master/scripts/rawinstall.sh | bash
   # atuin
