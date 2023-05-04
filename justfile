@@ -81,7 +81,7 @@ python-setup:
 
 # install phylum CLI latest
 phylum:
-	curl https://sh.phylum.io/ | sh -
+	curl https://sh.phylum.io/ | sh -s -- --yes
 
 
 
