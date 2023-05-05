@@ -16,6 +16,8 @@ brew "minisign"       # ec25519 signature verification
 brew "git-delta"      # git diff parser
 brew "broot"          # new shake on 'tree'
 brew "zoxide"         # smarter cd, z jumping
+brew "tre-command"    # better tree command
+brew "lazygit"        # way better git UI
 cask "1password-cli-beta"
 
 # fonts
